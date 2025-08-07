@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Quiz</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px;
+    }
+
+    button {
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Quiz: What is the capital of India?</h2>
+  <button onclick="checkAnswer('Mumbai')">Mumbai</button><br>
+  <button onclick="checkAnswer('Delhi')">Delhi</button><br>
+  <button onclick="checkAnswer('Chennai')">Chennai</button>
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer(ans) {
+      let result = document.getElementById("result");
+      if (ans === "Delhi") {
+        result.innerText = "✅ Correct Answer!";
+        result.style.color = "green";
+      } else {
+        result.innerText = "❌ Wrong Answer. Try again!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
